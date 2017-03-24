@@ -10,7 +10,8 @@ def leap_year(year: int) -> bool:
     :param year: the year
     :return: True if year is a leap year, False else
 
-    >>> leap_year(1) == False
+    >>> leap_year(1)
+    False
     """
     pass
 
