@@ -1,5 +1,5 @@
 # actual code
-def leap_year(year:int) -> bool:
+def leap_year(year: int) -> bool:
     pass
 
 
