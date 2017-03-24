@@ -5,7 +5,7 @@ def leap_year(year: int) -> bool:
     A leap year is defined as one that
     - is divisible by 4,
     - but is not otherwise divisible by 100
-    - unless it is also divisble by 400.
+    - unless it is also divisible by 400.
 
     :param year: the year
     :return: True if year is a leap year, False else
@@ -18,4 +18,4 @@ def leap_year(year: int) -> bool:
 
 # py-test
 def test_leap_year():
-    assert leap_year(1) == False
+    assert not leap_year(1)
