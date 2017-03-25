@@ -4,15 +4,15 @@ Implement a function that translates a roman numeral to a decimal number.
 
 Examples:
 
-- 1 <- „I“
-- 2 <- „II“
-- 4 <- „IV“
-- 5 <- „V“
-- 9 <- „IX“
-- 10 <- „X“
-- 42 <- „XLII“
-- 99 <- „XCIX“
-- 2013 <- „MMXIII“
+- 1 <- 'I'
+- 2 <- 'II'
+- 4 <- 'IV'
+- 5 <- 'V'
+- 9 <- 'IX'
+- 10 <- 'X'
+- 42 <- 'XLII'
+- 99 <- 'XCIX'
+- 2013 <- 'MMXIII'
 
 The decimal numbers are in the range from 'I' to 'MMM'.
 
