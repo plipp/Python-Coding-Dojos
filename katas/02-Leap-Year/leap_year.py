@@ -18,4 +18,4 @@ def leap_year(year: int) -> bool:
 
 # py-test
 def test_leap_year():
-    assert not leap_year(1)
+    assert leap_year(1) is False
