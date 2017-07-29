@@ -1,5 +1,6 @@
 # test with: python -m pytest pytest_sample.py
 
+
 def do_something():
     return 999
 

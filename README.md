@@ -19,4 +19,4 @@
 
 ## Tools
 - [Pycharm - Presentation Assist Plugin](https://plugins.jetbrains.com/plugin/7345-presentation-assistant)
-- [Pytest Sample](./katas/XX-Pytest-Sample/pytest_sample.py)
+- [Pytest/UnitTest/Mocking Samples](katas/XX-Test-Tool-Primers/)
