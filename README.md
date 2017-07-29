@@ -16,6 +16,7 @@
 
 ## Links
 - [Codekata - what and why + various katas](http://codekata.com/)
+- [Emily Baches Racing Car Katas](https://github.com/emilybache/Racing-Car-Katas)
 
 ## Tools
 - [Pycharm - Presentation Assist Plugin](https://plugins.jetbrains.com/plugin/7345-presentation-assistant)

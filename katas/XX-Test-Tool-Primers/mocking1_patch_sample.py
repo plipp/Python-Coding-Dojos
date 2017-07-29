@@ -4,24 +4,24 @@
 # ---------------- Productive Code --------------------------
 class QueryService:  # EXTERNAL Class, which the client class uses
     def __init__(self):
-        self.value = 5
+        self._value = 5
 
     def fetch_data(self, run):
         from time import sleep
-        self.value += 10
+        self._value += 10
         sleep(20)
         print("Snooze ... ")
-        return self.value + run
+        return self._value + run
 
 
 class QueryServiceClient:  # class under Test
     def __init__(self):
-        self.query_service = QueryService()
+        self._query_service = QueryService()
 
     def aggregate(self, run):
         aggregated = 0
         for i in range(run):
-            value = self.query_service.fetch_data(i)
+            value = self._query_service.fetch_data(i)
             aggregated += value
         return aggregated
 
@@ -73,4 +73,10 @@ class QueryServiceClientTest(unittest.TestCase):
 #           @patch('<extern_module>.sleep') vs @patch('time.sleep')
 # - Using patch is a CODE SMELL
 #   because it means that the class under test has been COUPLED to one or more other concrete classes!!!
-# - Solution: Dependency Injection => see: mocking2_mock_sample.py
+#
+# - Solutions:
+#   a) Monkey-Patching:
+#               client_under_test = QueryServiceClient()
+#               client_under_test._query_service = Mock()
+#               ...
+#   b) Dependency Injection => see: mocking2_mock_sample.py
