@@ -6,14 +6,13 @@ Assume you won a legacy code-base. Now you want to write unit tests for them,
 and that is harder than it needs to be. All of the code snippets fail to follow one or more of the 
 [SO(LI)D](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles.
 
-For each exercise, you should identify which SOLID principles are not being followed by the code. 
 There is only one class you are interested in writing tests for right now. 
 As a first step, try to get some kind of test in place before you change the class at all. 
 If the tests are hard to write, ask yourself - why?
 
 When you have some kind of test to lean on, refactor the code and make it testable. 
-Take care when refactoring not to alter the functionality, or change interfaces which 
-other client code may rely on. (Imagine there is client code in another repository t
+Take care when refactoring **not to alter the functionality, or change interfaces which 
+other client code may rely on**. (Imagine there is client code in another repository t
 hat you can't see right now). 
 Add more tests to cover the functionality of the particular class you've been asked to get under test.
 

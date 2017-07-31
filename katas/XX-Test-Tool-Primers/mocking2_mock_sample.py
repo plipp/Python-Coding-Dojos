@@ -6,12 +6,18 @@ class QueryService:  # EXTERNAL Class, which the client class uses
     def __init__(self):
         self._value = 5
 
-    def fetch_data(self, run):
+    def fetch_data(self, offset):
+        """
+        generates integer-value via complicated, long running queries/calculations
+        and returns it
+        :param offset: offset to add to the actual determined integer value
+        :return: integer result, always >= offset
+        """
         from time import sleep
         self._value += 10
-        sleep(20)
+        sleep(10)
         print("Snooze ... ")
-        return self._value + run
+        return self._value + offset
 
 
 class QueryServiceClient:  # class under Test, now with DEPENDENCY INJECTION
