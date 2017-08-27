@@ -20,4 +20,4 @@
 
 ## Tools
 - [Pycharm - Presentation Assist Plugin](https://plugins.jetbrains.com/plugin/7345-presentation-assistant)
-- [Pytest/UnitTest/Mocking Samples](katas/XX-Test-Tool-Primers/)
+- [Pytest/UnitTest/Mocking Samples](katas/XX-Primers/)
