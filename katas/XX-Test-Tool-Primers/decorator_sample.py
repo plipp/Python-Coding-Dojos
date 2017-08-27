@@ -115,3 +115,8 @@ if __name__ == '__main__':
     # print(do_something5(4))
     # print("do_something5.__name__: {}".format(do_something5.__name__))
     # print("do_something5.__doc__ : {}".format(do_something5.__doc__))
+
+
+# ... further reading
+# - http://book.pythontips.com/en/testing/decorators.html
+# - http://jamescooke.info/things-to-remember-about-decorators.html
