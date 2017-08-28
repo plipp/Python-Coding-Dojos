@@ -35,7 +35,7 @@ def fib(x):
 # ----------------------- the testing part
 
 import unittest
-from mock import Mock
+from unittest.mock import Mock
 
 
 class TestCashDecorator(unittest.TestCase):
