@@ -3,11 +3,16 @@
 from functools import wraps
 
 
+
+
+
 def cache(fn):
+    CACHE = dict()
     @wraps(fn)
-    def wrapper(*args, **kwargs):
-        # TODO lookup in/fill the cache
-        return fn(*args, **kwargs)
+    def wrapper(n):
+        if n not in CACHE:
+            CACHE[n] = fn(n)
+        return CACHE[n]
 
     return wrapper
 
@@ -55,6 +60,20 @@ class TestCashDecorator(unittest.TestCase):
         # Subsequent call with a new value increased the call count
         self.assertEqual(wrapped(7), 'hi')
         self.assertEqual(my_fn.call_count, 2)
+
+    def test_cache_is_local(self):
+        my_fn1 = Mock(name='my_fn1')
+        my_fn1.return_value = 'hi1'
+
+        my_fn2 = Mock(name='my_fn2')
+        my_fn2.return_value = 'hi2'
+
+        wrapped1 = cache(my_fn1)
+        wrapped2 = cache(my_fn2)
+
+        self.assertEqual(wrapped1(4), 'hi1')
+
+        self.assertEqual(wrapped2(4), 'hi2')
 
 
 if __name__ == "__main__":
